@@ -1,0 +1,15 @@
+#List network interfaces
+ip link list
+#List IP addresses
+ip address show
+#show IP routes
+ip route list
+
+#Article about Network Namespaces
+https://lwn.net/Articles/580893/
+
+#List network Namespaces
+ip netns list
+
+
+
