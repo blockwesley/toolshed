@@ -1,0 +1,11 @@
+Arch: pacman -S qemu
+Debian/Ubuntu:
+    For full system emulation: apt-get install qemu-system
+    For emulating Linux binaries: apt-get install qemu-user-static
+
+Fedora: dnf install @virtualization
+
+Gentoo: emerge --ask app-emulation/qemu
+
+RHEL/CentOS: yum install qemu-kvm
+SUSE: zypper install qemu
