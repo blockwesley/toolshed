@@ -12,7 +12,8 @@ else
     exit 1
 fi
 
-#Grep the cpuinfo file and determine if 
+#Grep the cpuinfo file and determine if the host has hardware virtualization support
+# REF : https://www.cyberciti.biz/faq/linux-xen-vmware-kvm-intel-vt-amd-v-support/
 if [ -x "$(which grep)" ]; then
     grep -E -wo 'svm|vmx|lm|aes' /proc/cpuinfo  | sort | uniq \
     | sed -e 's/aes/Hardware encryption=Yes (&)/g' \
