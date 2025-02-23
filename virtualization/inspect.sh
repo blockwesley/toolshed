@@ -14,8 +14,6 @@ fi
 
 #Print Some Basic Info About the Host and Setup
 if [ -x "$(which free)" ]; then
-    # $total_memory = 
-    # total_memory = eval(`awk \'NR==2 {print $3}\'`)
     # MEMORY=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')
     TOTAL_MEMORY=$(free -h | awk 'NR==2{print $2 }')
     USED_MEMORY=$(free -h | awk 'NR==2{print $3 }')
