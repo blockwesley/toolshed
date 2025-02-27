@@ -1,7 +1,10 @@
 #!/bin/bash
 # IPv4 IPTABLES Script
 
-IPTABLESCMD="/usr/sbin/iptables" 
+IPTABLESCMD="/usr/sbin/iptables"
+IP6TABLESCMD="/usr/sbin/ip6tables"
+
+#IFCMD="ip link list | awk '{print $2}' | sed -E "s/([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}//" | sed s/://"
 BLOCKLIST="blockedip" 
 DROPMSG="BLOCKED IP DROP" 
 BLOCKEDIPLOG="/usr/firewall/blocked_ips.txt"
